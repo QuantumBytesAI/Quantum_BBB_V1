@@ -1,6 +1,9 @@
 # babav1
-Sure! Here's a clear and structured guide for your Telegram functions:
 
+Author: Quantum
+Version: V1.0
+
+Comprehensive admin guide
 ---
 
 ## Admin Commands
@@ -156,4 +159,144 @@ Sure! Here's a clear and structured guide for your Telegram functions:
 
 ---
 
-I hope this helps! Let me know if you need any more assistance. 😊
+### Anti-Flood Control
+
+**Purpose:** Prevent users from sending too many messages in a row.
+
+- **/flood**: Get the current flood control setting.
+- **Admins Only:**
+  - **/setflood <int/'no'/'off'>**: Enable or disable flood control. Example: `/setflood 10`
+  - **/setfloodmode <ban/kick/mute/tban/tmute> <value>**: Action to perform when flood limit is exceeded. Example values:
+    - `5m` = 5 minutes
+    - `6h` = 6 hours
+    - `3d` = 3 days
+    - `1w` = 1 week
+
+---
+
+### Force Subscribe
+
+**Purpose:** Mute members who are not subscribed to your channel until they subscribe.
+
+- **Setup:**
+  - [Add me in your group as admin](https://t.me/{BOT_USERNAME}?startgroup=new)
+  - [Add me in your channel as admin](https://t.me/{BOT_USERNAME}?startgroup=new)
+- **Commands:**
+  - **/fsub <channel username>**: Turn on and set up the channel.
+  - **/fsub off**: Turn off force subscribe.
+
+---
+
+### Locks
+
+**Purpose:** Restrict certain types of messages in the chat.
+
+- **/locktypes**: List all possible lock types.
+- **Admins Only:**
+  - **/lock <type>**: Lock items of a certain type.
+  - **/unlock <type>**: Unlock items of a certain type.
+  - **/locks**: Show the current list of locks in the chat.
+
+---
+
+### Log Channel
+
+**Purpose:** Set up a log channel for admin actions.
+
+- **Admins Only:**
+  - **/logchannel**: Get log channel info.
+  - **/setlog**: Set the log channel.
+  - **/unsetlog**: Unset the log channel.
+
+---
+
+### Mute
+
+**Purpose:** Silence users in the chat.
+
+- **Admins Only:**
+  - **/mute <userhandle>**: Silence a user.
+  - **/tmute <userhandle> x(m/h/d)**: Mute a user for a specific time.
+  - **/unmute <userhandle>**: Unmute a user.
+  - **/dmute <userhandle>**: Silence a user.
+
+---
+
+### Night Mode
+
+**Purpose:** Automatically close and open chats to prevent night spam.
+
+- **Admins Only:**
+  - **/nightmode**: Add group to night mode chats.
+  - **/rmnight**: Remove group from night mode chats.
+
+---
+
+### Notes
+
+**Purpose:** Save and retrieve notes in the chat.
+
+- **/get <notename>**: Get the note with this name.
+- **#<notename>**: Same as /get.
+- **/notes** or **/saved**: List all saved notes.
+- **/number**: Retrieve the note by its number in the list.
+- **Admins Only:**
+  - **/save <notename> <notedata>**: Save note data with this name.
+  - **/clear <notename>**: Clear note with this name.
+  - **/removeallnotes**: Remove all notes from the group.
+
+---
+
+### Tag All
+
+**Purpose:** Mention all members in the group.
+
+- **Admins Only:**
+  - **/tagall** or **@all**: Mention all members in the group.
+
+---
+
+### Warnings
+
+**Purpose:** Warn users and manage warnings.
+
+- **/warns <userhandle>**: Get a user's number and reason for warnings.
+- **/warnlist**: List all current warning filters.
+- **Admins Only:**
+  - **/warn <userhandle>**: Warn a user.
+  - **/dwarn <userhandle>**: Warn a user and delete the message.
+  - **/resetwarn <userhandle>**: Reset the warnings for a user.
+  - **/addwarn <keyword> <reply message>**: Set a warning filter on a keyword.
+  - **/nowarn <keyword>**: Stop a warning filter.
+  - **/warnlimit <num>**: Set the warning limit.
+  - **/strongwarn <on/yes/off/no>**: Set strong warnings.
+
+---
+
+### Welcome Messages
+
+**Purpose:** Manage welcome and goodbye messages.
+
+- **/welcome <on/off>**: Enable/disable welcome messages.
+- **/welcome**: Show current welcome settings.
+- **/welcome noformat**: Show current welcome settings without formatting.
+- **/goodbye**: Same usage and args as `/welcome`.
+- **/setwelcome <sometext>**: Set a custom welcome message.
+- **/setgoodbye <sometext>**: Set a custom goodbye message.
+- **/resetwelcome**: Reset to the default welcome message.
+- **/resetgoodbye**: Reset to the default goodbye message.
+- **/cleanwelcome <on/off>**: Delete the previous welcome message to avoid spamming.
+- **/welcomemutehelp**: Information about welcome mutes.
+- **/cleanservice <on/off>**: Delete Telegram's welcome/left service messages.
+- **/welcomehelp**: View more formatting information for custom welcome/goodbye messages.
+
+---
+
+### Zombie Accounts
+
+**Purpose:** Remove deleted accounts from the group.
+
+- **/zombies**: Start searching for deleted accounts in the group.
+- **/zombies clean**: Remove the deleted accounts from the group.
+
+---
