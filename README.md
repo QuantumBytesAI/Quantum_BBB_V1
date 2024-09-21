@@ -19,7 +19,7 @@
 
 ### 🚀 Quantum Group Controller
 
-Welcome aboard the Quantum Robot—a trailblazing ally for your Telegram group management adventures, brought to you in collaboration with BaBa! 🌟 Dive into an exhilarating demo of its dynamic features and capabilities. Remember, this demo is your passport to a temporary thrill, so make sure to explore and enjoy every innovation it offers while it’s here! 😄
+Hey there! Ready to meet your new Telegram group management buddy? Say hello to Quantum Robot! This cool bot, made together with BaBa, is here to make managing your group a breeze. Check out its features while you can, and have fun exploring all the cool things it can do.
 ---
 
 ## ʀᴇǫᴜɪʀᴇᴍᴇɴᴛs
