@@ -1,6 +1,134 @@
-# 📖 Quantum Bot Documentation  
+# Quantum ʀᴏʙᴏᴛ
 
-Welcome to the comprehensive guide for Quantum Bot! This documentation is designed to help you seamlessly navigate through the wide array of features and commands that Quantum Bot offers. Whether you are an admin, a trusted user, or simply a member of a group, you’ll find all the necessary information to make the most out of Quantum Bot here.  
+<p align="center">
+  <img src="https://i.ibb.co/bP4GnJ5/Black-Blue-Modern-Minimalist-Minutes-With-AI-Youtube-Thumbnail.png" alt="Quantum Robot">
+</p>
+
+<p align="center">
+  <a href="https://github.com/Noob-Quantum/Quantum/stargazers"><img src="https://img.shields.io/github/stars/Noob-Quantum/Quantum?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars"></a>
+  <a href="https://github.com/Noob-Quantum/Quantum/network/members"><img src="https://img.shields.io/github/forks/Noob-Quantum/Quantum?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Forks"></a>
+  <a href="https://github.com/Noob-Quantum/Quantum/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License"></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Written%20in-Python-skyblue?style=for-the-badge&logo=python" alt="Python"></a>
+  <a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=white&label=telethon&logo=python&logoColor=blue&style=for-the-badge" alt="Telethon"></a>
+  <a href="https://pypi.org/project/Pyrogram/"><img src="https://img.shields.io/pypi/v/pyrogram?color=white&label=pyrogram&logo=python&logoColor=blue&style=for-the-badge" alt="Pyrogram"></a>
+  <a href="https://github.com/Noob-Quantum/Quantum"><img src="https://img.shields.io/github/repo-size/Noob-Quantum/Quantum?color=skyblue&logo=github&logoColor=blue&style=for-the-badge" alt="Repo Size"></a>
+  <a href="https://github.com/Noob-Quantum/Quantum/commits/Noob-Quantum"><img src="https://img.shields.io/github/last-commit/Noob-Quantum/Quantum?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Last Commit"></a>
+</p>
+
+---
+
+### 🚀 Quantum Group Controller
+
+Welcome aboard the Quantum Robot—a trailblazing ally for your Telegram group management adventures, brought to you in collaboration with BaBa! 🌟 Dive into an exhilarating demo of its dynamic features and capabilities. Remember, this demo is your passport to a temporary thrill, so make sure to explore and enjoy every innovation it offers while it’s here! 😄
+---
+
+## ʀᴇǫᴜɪʀᴇᴍᴇɴᴛs
+
+- [Python 3.11.5](https://www.python.org/downloads/release/python-3115/)
+- [Telegram API Key](https://docs.pyrogram.org/intro/setup#api-keys)
+- [Telegram Bot Token](https://t.me/botfather)
+- [MongoDB URI](https://telegra.ph/How-To-get-Mongodb-URI-04-06)
+
+---
+
+## ᴅᴇᴘʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 🚀
+
+The easiest way to deploy the Group Controller:
+
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/noob-mukesh/advance-repo"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45" alt="Deploy to Heroku"></a></p>
+
+---
+
+## ʜᴏᴡ ᴛᴏ ᴍᴀᴋᴇ ʏᴏᴜʀ ᴏᴡɴ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ
+
+Discover the secrets by following our [video tutorial on YouTube](https://youtu.be/#):
+
+![YouTube Video Views](https://img.shields.io/youtube/views/YT_nYVb0OxI?style=social)
+
+---
+
+## ᴅᴇᴩʟᴏʏ ᴏɴ ᴠᴘs/ʟᴏᴄᴀʟ
+
+### ᴠᴘs/ʟᴏᴄᴀʟ ᴅᴇᴘʟᴏʏᴍᴇɴᴛ ᴍᴇᴛʜᴏᴅ
+
+1. Obtain your [Necessary Variables](https://github.com/Noob-Quantum/advance-repo/blob/main/Quantum/config.py).
+2. Upgrade and Update:
+   ```bash
+   sudo apt-get update && sudo apt-get upgrade -y
+   ```
+3. Install required packages:
+   ```bash
+   sudo apt-get install python3-pip -y
+   ```
+4. Install pip:
+   ```bash
+   sudo pip3 install -U pip
+   ```
+5. Clone the repository:
+   ```bash
+   git clone https://github.com/Noob-Quantum/advance-repo && cd Quantum
+   ```
+6. Install/Upgrade setuptools:
+   ```bash
+   pip3 install --upgrade pip setuptools
+   ```
+7. Install requirements:
+   ```bash
+   pip3 install -U -r requirements.txt
+   ```
+8. Fill your variables in `config.py`:
+   ```bash
+   vi Quantum/config.py
+   ```
+   - Press `I` to edit, `Esc` to stop, and `:wq` to save.
+9. Install tmux to keep the bot running:
+   ```bash
+   sudo apt install tmux && tmux
+   ```
+10. Run the bot:
+    ```bash
+    python3 -m Quantum
+    ```
+11. Exit from tmux: Press `Ctrl+b` then `d`.
+
+---
+
+## ᴡʀɪᴛᴇ ɴᴇᴡ ᴍᴏᴅᴜʟᴇs
+
+Add license text here; get it from below.
+
+```python
+from Quantum import pbot, quantum  # This is bot's client
+from pyrogram import filters  # Pyrogram filters
+
+# Module information
+__mod_name__ = "Module Name"
+__help__ = "Module help message"
+
+@quantum.on_message(filters.command("start"))
+async def some_function(_, message):
+    await message.reply_text("ɪ'ᴍ.ᴀʟɪᴠᴇ ʙᴀʙʏ❣️!!")
+
+# Many useful functions are in Quantum/utils/, Quantum, and Quantum/modules/
+```
+
+Place this file in `Quantum/modules/`, restart, and test your bot.
+
+---
+
+## Credits
+
+Massive thanks to the Quantum project and all [contributors](https://github.com/Noob-Quantum/Quantum/graphs/contributors) who helped make this group controller both powerful and useful ❤️.
+
+[QUANTUM](https://t.me/quantumbytesai)
+
+
+This version uses standard elements like headers, lists, and code blocks that should render consistently across different GitHub markdown viewers, ensuring clarity and readability. Remember to preview the changes on GitHub to ensure everything appears as expected.
+
+
+# 🎩✨ Quantum Bot Documentation  
+
+Welcome to the enchanted world of **Quantum Bot**—your ultimate guide to mastering group dynamics in a magical and efficient way! With a spellbinding array of features and commands, Quantum Bot is your trusty companion, developed in a collaboration of brilliance among **BaBa**, **Quantum's visionary Head Developer Mukesh**, and the ingenious **developer Chikuu**. This documentation is your map to navigate these features, whether you're leading as an admin, supporting as a trusted user, or participating as an enthusiastic member.  
 
 ## Table of Contents  
 
@@ -29,17 +157,19 @@ Welcome to the comprehensive guide for Quantum Bot! This documentation is design
 - [👻 Zombie Commands](#zombie-commands)  
 - [📜 Categories and Quick Links](#categories-and-quick-links)  
 
-## 🌟 Modules Overview  
+### Discover the Magic Within: Modules Overview  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#-quantum-bot-documentation)  
 
-Quantum Bot is packed with modules suited for different needs. Each module contains specific commands tailored to perform various actions to manage and optimize your group. Here's a detailed look at each module:  
+The Quantum Bot is designed like a wizard's toolkit, jam-packed with enchanting modules tailor-made for every conceivable need. Each module unveils a treasure trove of specialized commands that empower you to manage and optimize your group with the elegance of magic. Whether it's seamlessly executing administrative tasks or weaving intricate user interactions, Quantum Bot provides the charms necessary—all at the flick of a command.  
+
+🔹 **Captivating Features Await:** Delve deeper to discover how each module can elevate your group experience to mythical heights. Be prepared to unleash the full potential of your community with Quantum Bot as your guide!
 
 ---  
 
 ## 👮‍♂️ Admin Commands   
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Admin tools to manage your group effortlessly:  
 
@@ -69,7 +199,7 @@ Admin tools to manage your group effortlessly:
 
 ## 🙌 Approval System  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Manage trusted users with approval commands:  
 
@@ -83,7 +213,7 @@ Manage trusted users with approval commands:
 
 ## ❌ Ban Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Efficiently manage who can stay in your group:  
 
@@ -100,7 +230,7 @@ Efficiently manage who can stay in your group:
 
 ## 📝 Blacklist Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Automate deletion of unwanted messages:  
 
@@ -114,7 +244,7 @@ Automate deletion of unwanted messages:
 
 ## ⚙️ Clean Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Keep your group decluttered by managing blue text messages:  
 
@@ -127,7 +257,7 @@ Keep your group decluttered by managing blue text messages:
 
 ## 🔗 Connection Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Connect to another chat’s database to manage shared notes and filters:  
 
@@ -140,7 +270,7 @@ Connect to another chat’s database to manage shared notes and filters:
 
 ## 🔦 Filter Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Set automated responses when certain keywords are triggered:  
 
@@ -155,7 +285,7 @@ Set automated responses when certain keywords are triggered:
 
 ## 🚫 Disable Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Control the activation of commands:  
 
@@ -171,7 +301,7 @@ Control the activation of commands:
 
 ## 🛠 Developer Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 A set of advanced commands for developers and bot maintainers:  
 
@@ -186,7 +316,7 @@ A set of advanced commands for developers and bot maintainers:
 
 ## 📊 Eval Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Owner-exclusive set of commands for advanced operations:  
 
@@ -201,7 +331,7 @@ Owner-exclusive set of commands for advanced operations:
 
 ## 🌐 Federation Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Impose bans across multiple groups with federations:  
 
@@ -213,7 +343,7 @@ Impose bans across multiple groups with federations:
 
 ## 🚱 Flood Control  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Configure how the bot handles message flooding:  
 
@@ -226,7 +356,7 @@ Configure how the bot handles message flooding:
 
 ## 📢 Force Subscribe  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Ensure new users subscribe to your designated channel:  
 
@@ -237,7 +367,7 @@ Ensure new users subscribe to your designated channel:
 
 ## 🔒 Lock Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Control what types of messages can be shared in the group:  
 
@@ -251,7 +381,7 @@ Control what types of messages can be shared in the group:
 
 ## 🛑 Log Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Enable logging for monitoring group activities:  
 
@@ -264,7 +394,7 @@ Enable logging for monitoring group activities:
 
 ## 🔕 Mute Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Control who can speak in the group:  
 
@@ -277,7 +407,7 @@ Control who can speak in the group:
 
 ## 🌙 Night Mode Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Automate group management during night hours:  
 
@@ -289,7 +419,7 @@ Automate group management during night hours:
 
 ## 🗒 Notes Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Facilitate group communication with notes:  
 
@@ -305,7 +435,7 @@ Facilitate group communication with notes:
 
 ## 📣 Tag All Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 For emergency messaging to all group members:  
 
@@ -316,7 +446,7 @@ For emergency messaging to all group members:
 
 ## ⚠️ Warn Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Manage user behavior with automated warnings:  
 
@@ -334,7 +464,7 @@ Manage user behavior with automated warnings:
 
 ## 👋 Welcome Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Craft your group's first impression with custom welcome messages:  
 
@@ -352,7 +482,7 @@ Craft your group's first impression with custom welcome messages:
 
 ## 👻 Zombie Commands  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Quickly identify and remove inactive accounts:  
 
@@ -363,7 +493,7 @@ Quickly identify and remove inactive accounts:
 
 ## 📜 Categories and Quick Links  
 
-[Back to top](#table-of-contents)  
+[🔝 Back to Top](#table-of-contents)  
 
 Navigate through these commands effortlessly using the bot interface buttons:  
 
@@ -374,4 +504,4 @@ For further inquiries, contact our support team or reach out to special group me
 
 *Tip: Frequently update the bot's version for new features and enhanced security!*  
 
-Thank you for choosing Quantum Bot, ensuring smooth and enjoyable group management! 🎉
+Thank you for choosing Quantum Bot and Baba, ensuring smooth and enjoyable group management! 🎉
