@@ -1,302 +1,307 @@
-# Quantum BaBa V1
+# 📖 Quantum Bot Documentation
 
-Author: Quantum
-Version: V1.0
+Welcome to the comprehensive guide for Quantum Bot! This documentation is designed to help you seamlessly navigate through the wide array of features and commands that Quantum Bot offers. Whether you are an admin, a trusted user, or simply a member of a group, you’ll find all the necessary information to make the most out of Quantum Bot here.
 
-Comprehensive admin guide
----
+## 🌟 Modules Overview
 
-## Admin Commands
-
-### Pinning Messages
-- **/pin**: Silently pins the message replied to. Add `'loud'` or `'notify'` to notify users.
-- **/unpin**: Unpins the currently pinned message.
-
-### Group Management
-- **/invitelink**: Gets the invite link for the group.
-- **/setgtitle <text>**: Sets the group title.
-- **/setgpic**: Reply to an image to set it as the group photo.
-- **/setdesc**: Sets the group description.
-- **/setsticker**: Sets the group sticker.
-
-### Admin Management
-- **/promote**: Promotes the user replied to.
-- **/lowpromote**: Promotes the user replied to with limited rights.
-- **/fullpromote**: Promotes the user replied to with full rights.
-- **/demote**: Demotes the user replied to.
-- **/title <title here>**: Sets a custom title for an admin promoted by the bot.
-- **/admincache**: Force refreshes the admins list.
-
-### Message Management
-- **/del**: Deletes the message you replied to.
-- **/purge**: Deletes all messages between this and the replied-to message.
-- **/purge <integer X>**: Deletes the replied message and X messages following it.
-- **/spurge**: Deletes all messages between this and the replied-to message.
+Quantum Bot is packed with modules suited for different needs. Each module contains specific commands tailored to perform various actions to manage and optimize your group. Here's a detailed look at each module:
 
 ---
 
-## Approval Commands
+## 👮‍♂️ Admin Commands 
 
-### Approving Users
-- **/approval**: Checks a user's approval status in this chat.
-- **/approve**: Approves a user, exempting them from locks, blacklists, and antiflood.
-- **/unapprove**: Unapproves a user, subjecting them to locks, blacklists, and antiflood again.
-- **/approved**: Lists all approved users.
-- **/unapproveall**: Unapproves all users in a chat (cannot be undone).
+Admin tools to manage your group effortlessly:
 
----
+- **Pin/Unpin Commands**: 
+  - `/pin` - Silently pins a message. Use `'loud'` or `'notify'` for notifications.
+  - `/unpin` - Unpins the current pinned message.
+- **Invite and Promotion**: 
+  - `/invitelink` - Retrieves the group's invite link.
+  - `/promote` - Promotes a user with standard rights.
+  - `/lowpromote` - Promotes a user with limited rights.
+  - `/fullpromote` - Grants full rights to a user.
+  - `/demote` - Demotes a user from their admin position.
+- **Title and Admin List**:
+  - `/title <title>` - Sets a custom title for a promoted admin.
+  - `/admincache` - Refreshes the list of admins.
+- **Message Management**: 
+  - `/del` - Deletes a specific message.
+  - `/purge` - Deletes messages in bulk between two points.
+  - `/spurge` - Deletes all messages between two specified messages.
+- **Group Settings**:
+  - `/setgtitle <title>` - Updates the group title.
+  - `/setgpic` - Updates the group photo (reply with an image).
+  - `/setdesc` - Sets a group description.
+  - `/setsticker` - Sets the group sticker.
 
-## Ban Commands
+---  
 
-### User Management
-- **/kickme**: Kicks the user who issued the command.
+## 🙌 Approval System
 
-### Admin Only
-- **/ban <userhandle>**: Bans a user (via handle or reply).
-- **/sban <userhandle>**: Silently bans a user, deleting the command and replied message without replying.
-- **/tban <userhandle> x(m/h/d)**: Bans a user for `x` time (minutes, hours, days).
-- **/unban <userhandle>**: Unbans a user (via handle or reply).
-- **/kick <userhandle>**: Kicks a user out of the group (via handle or reply).
+Manage trusted users with approval commands:
 
----
-
-## Blacklist Commands
-
-### Managing Blacklists
-- **/blacklist**: View the current blacklisted words.
-
-### Admin Only
-- **/addblacklist <triggers>**: Adds a trigger to the blacklist. Each line is considered one trigger.
-- **/unblacklist <triggers>**: Removes triggers from the blacklist. Each line is considered one trigger.
-- **/blacklistmode <off/del/warn/ban/kick/mute/tban/tmute>**: Sets the action to perform when someone sends blacklisted words.
-
----
-
-## Blue Text Cleaner
-
-### Cleaning Commands
-- **/cleanblue <on/off/yes/no>**: Cleans commands after sending.
-- **/ignoreblue <word>**: Prevents auto-cleaning of the command.
-- **/unignoreblue <word>**: Removes the prevention of auto-cleaning of the command.
-- **/listblue**: Lists currently whitelisted commands.
+- `/approval`: Check a user's approval status in the chat.
+- `/approve`: Exempt a user from locks and blacklists.
+- `/unapprove`: Revoke approval for a user, reapplying restrictions.
+- `/approved`: List all approved users.
+- `/unapproveall`: Remove approval for all users.
 
 ---
 
-## Connection Commands
+## ❌ Ban Commands
 
-### Managing Connections
-- **/connect**: Connects to chat (can be done in a group by /connect or /connect <chat ID> in PM).
-- **/connection**: Lists connected chats.
-- **/disconnect**: Disconnects from a chat.
-- **/helpconnect**: Lists available commands that can be used remotely.
+Efficiently manage who can stay in your group:
 
-### Admin Only
-- **/allowconnect <yes/no>**: Allows a user to connect to a chat.
+- **Self-Kick**:
+  - `/kickme`: Kick yourself from the group.
+- **Admin Only**:
+  - `/ban <user>`: Bans a user.
+  - `/sban <user>`: Silently bans a user, removes command/reply visibility.
+  - `/tban <user> <time>`: Temporarily bans a user (`m` for minutes, `h` for hours, `d` for days).
+  - `/unban <user>`: Lifts a ban on a user.
+  - `/kick <user>`: Kicks a user from the group.
+  
+---
+
+## 📝 Blacklist Commands
+
+Automate deletion of unwanted messages:
+
+- `/blacklist`: Shows the list of blacklisted words.
+- **Admin Only**:
+  - `/addblacklist <triggers>`: Add triggers to the blacklist.
+  - `/unblacklist <triggers>`: Remove triggers from the blacklist.
+  - `/blacklistmode <action>`: Set an action (e.g., `off`, `del`, `warn`, `ban`, etc.) when a blacklisted word is detected.
 
 ---
 
-## Filter Commands
+## ⚙️ Clean Commands
 
-### Managing Filters
-- **/filters**: Lists all active filters saved in the chat.
+Keep your group free from unwanted blue text:
 
-### Admin Only
-- **/filter <keyword> <reply message>**: Adds a filter to this chat. The bot will reply with the message whenever the keyword is mentioned.
-- **/stop <filter keyword>**: Stops that filter.
-- **/removeallfilters**: Removes all chat filters at once.
-
----
-
-## Disable Commands
-
-### Checking and Managing Commands
-- **/cmds**: Checks the current status of disabled commands.
-
-### Admin Only
-- **/enable <cmd name>**: Enables that command.
-- **/disable <cmd name>**: Disables that command.
-- **/enablemodule <module name>**: Enables all commands in that module.
-- **/disablemodule <module name>**: Disables all commands in that module.
-- **/listcmds**: Lists all possible toggleable commands.
+- `/cleanblue <on/off>`: Enable blue text cleaning.
+- `/ignoreblue <word>`: Exclude certain words from auto-cleaning.
+- `/unignoreblue <word>`: Re-enable auto-cleaning for certain words.
+- `/listblue`: List currently whitelisted commands.
 
 ---
 
-## Developer Commands
+## 🔗 Connection Commands
 
-### Special Access Commands
-- **/sudolist**: Lists all special users.
-- **/supportlist**: Lists all support users.
-- **/tigers**: Lists all tiger users.
-- **/wolves**: Lists all wolf users.
-- **/devlist**: Lists all developer users.
-- **/snipe <chatID> <string>**: Sends a message to a specific chat.
+Connect to another chat’s database to manage notes and filters:
 
-### Ping and Broadcast
-- **/ping**: Gets the ping time of the bot to the Telegram server.
-- **/broadcastusers or /buser**: Broadcasts to all users.
-- **/broadcastgroups or /bchat**: Broadcasts to all groups.
+- `/connect`: Connect to a chat.
+- `/connection`: List connected chats.
+- `/disconnect`: Disconnect from a chat.
+- `/helpconnect`: Access remote management command list.
 
 ---
 
-## Evaluation Commands
+## 🔦 Filter Commands
 
-### Owner Commands
-- **/eval**: Evaluates simple code.
-- **/ex**: Executes code.
-- **/clear**: Runs clear command.
-- **/unbanall**: Unbans all members.
-- **/unmuteall**: Unmutes all members.
-- **/users**: Gets the group users list.
+Set automated responses based on certain keywords:
 
----
-
-## Federation Commands
-
-### Managing Federations
-- **/fedownerhelp**: Provides help for federation creation and owner-only commands.
-- **/fedadminhelp**: Provides help for federation administration commands.
-- **/feduserhelp**: Provides help for commands anyone can use.
+- `/filters`: Lists all active filters.
+- **Admin Only**:
+  - `/filter <keyword> <reply>`: Adds a filter in the chat.
+  - `/stop <keyword>`: Stops a specific filter.
+- **Chat Creator Only**:
+  - `/removeallfilters`: Clears all filters in the chat.
 
 ---
 
-### Anti-Flood Control
+## 🚫 Disable Commands
 
-**Purpose:** Prevent users from sending too many messages in a row.
+Manage command availability:
 
-- **/flood**: Get the current flood control setting.
-- **Admins Only:**
-  - **/setflood <int/'no'/'off'>**: Enable or disable flood control. Example: `/setflood 10`
-  - **/setfloodmode <ban/kick/mute/tban/tmute> <value>**: Action to perform when flood limit is exceeded. Example values:
-    - `5m` = 5 minutes
-    - `6h` = 6 hours
-    - `3d` = 3 days
-    - `1w` = 1 week
-
----
-
-### Force Subscribe
-
-**Purpose:** Mute members who are not subscribed to your channel until they subscribe.
-
-- **Setup:**
-  - [Add me in your group as admin](https://t.me/{BOT_USERNAME}?startgroup=new)
-  - [Add me in your channel as admin](https://t.me/{BOT_USERNAME}?startgroup=new)
-- **Commands:**
-  - **/fsub <channel username>**: Turn on and set up the channel.
-  - **/fsub off**: Turn off force subscribe.
+- `/cmds`: Check the status of disabled commands.
+- **Admins Only**:
+  - `/enable <command>`: Reactivate a command.
+  - `/disable <command>`: Disable a specific command.
+  - `/enablemodule <module>`: Reactivate all commands in a module.
+  - `/disablemodule <module>`: Disable all commands in a module.
+  - `/listcmds`: List all toggleable commands.
 
 ---
 
-### Locks
+## 🛠 Developer Commands
 
-**Purpose:** Restrict certain types of messages in the chat.
+Restricted to select users for advanced troubleshooting:
 
-- **/locktypes**: List all possible lock types.
-- **Admins Only:**
-  - **/lock <type>**: Lock items of a certain type.
-  - **/unlock <type>**: Unlock items of a certain type.
-  - **/locks**: Show the current list of locks in the chat.
-
----
-
-### Log Channel
-
-**Purpose:** Set up a log channel for admin actions.
-
-- **Admins Only:**
-  - **/logchannel**: Get log channel info.
-  - **/setlog**: Set the log channel.
-  - **/unsetlog**: Unset the log channel.
+- `/sudolist`: Lists all sudo users.
+- `/supportlist`: List all support users.
+- `/ping`: Check bot ping response time.
+- **Broadcast (Bot Owner Only)**:
+  - `/broadcastusers`: Send a message to all users.
+  - `/broadcastgroups`: Send a message to all groups.
 
 ---
 
-### Mute
+## 📊 Eval Commands
 
-**Purpose:** Silence users in the chat.
+Owner-only commands for technical operations:
 
-- **Admins Only:**
-  - **/mute <userhandle>**: Silence a user.
-  - **/tmute <userhandle> x(m/h/d)**: Mute a user for a specific time.
-  - **/unmute <userhandle>**: Unmute a user.
-  - **/dmute <userhandle>**: Silence a user.
-
----
-
-### Night Mode
-
-**Purpose:** Automatically close and open chats to prevent night spam.
-
-- **Admins Only:**
-  - **/nightmode**: Add group to night mode chats.
-  - **/rmnight**: Remove group from night mode chats.
+- `/eval`: Evaluate code snippets.
+- `/ex`: Execute a command.
+- `/clear`: Clear executed command.
+- `/unbanall`: Unban all members.
+- `/unmuteall`: Unmute all members.
+- `/users`: List group members.
 
 ---
 
-### Notes
+## 🌐 Federation Commands
 
-**Purpose:** Save and retrieve notes in the chat.
+Ban users across multiple groups:
 
-- **/get <notename>**: Get the note with this name.
-- **#<notename>**: Same as /get.
-- **/notes** or **/saved**: List all saved notes.
-- **/number**: Retrieve the note by its number in the list.
-- **Admins Only:**
-  - **/save <notename> <notedata>**: Save note data with this name.
-  - **/clear <notename>**: Clear note with this name.
-  - **/removeallnotes**: Remove all notes from the group.
+- `/fedownerhelp`: Help for Federation Owners.
+- `/fedadminhelp`: Help for Federation Admins.
+- `/feduserhelp`: Help for general Federation Users.
+  
+---
+
+## 🚱 Flood Control
+
+Manage flood settings:
+
+- `/flood`: Get current flood control setting.
+- **Admin Only**:
+  - `/setflood <int/'no'/'off'>`: Enable or disable flood control.
+  - `/setfloodmode <action> <value>`: Set action for exceeding flood limit (`ban`, `kick`, `mute`, etc.)
 
 ---
 
-### Tag All
+## 📢 Force Subscribe
 
-**Purpose:** Mention all members in the group.
+Ensure users are subscribed to your channel:
 
-- **Admins Only:**
-  - **/tagall** or **@all**: Mention all members in the group.
-
----
-
-### Warnings
-
-**Purpose:** Warn users and manage warnings.
-
-- **/warns <userhandle>**: Get a user's number and reason for warnings.
-- **/warnlist**: List all current warning filters.
-- **Admins Only:**
-  - **/warn <userhandle>**: Warn a user.
-  - **/dwarn <userhandle>**: Warn a user and delete the message.
-  - **/resetwarn <userhandle>**: Reset the warnings for a user.
-  - **/addwarn <keyword> <reply message>**: Set a warning filter on a keyword.
-  - **/nowarn <keyword>**: Stop a warning filter.
-  - **/warnlimit <num>**: Set the warning limit.
-  - **/strongwarn <on/yes/off/no>**: Set strong warnings.
+- `/fsub <channel>`: Enable and configure force subscribe.
+- `/fsub off`: Disable force subscribe.
 
 ---
 
-### Welcome Messages
+## 🔒 Lock Commands
 
-**Purpose:** Manage welcome and goodbye messages.
+Restrict types of media and messages in your group:
 
-- **/welcome <on/off>**: Enable/disable welcome messages.
-- **/welcome**: Show current welcome settings.
-- **/welcome noformat**: Show current welcome settings without formatting.
-- **/goodbye**: Same usage and args as `/welcome`.
-- **/setwelcome <sometext>**: Set a custom welcome message.
-- **/setgoodbye <sometext>**: Set a custom goodbye message.
-- **/resetwelcome**: Reset to the default welcome message.
-- **/resetgoodbye**: Reset to the default goodbye message.
-- **/cleanwelcome <on/off>**: Delete the previous welcome message to avoid spamming.
-- **/welcomemutehelp**: Information about welcome mutes.
-- **/cleanservice <on/off>**: Delete Telegram's welcome/left service messages.
-- **/welcomehelp**: View more formatting information for custom welcome/goodbye messages.
+- `/locktypes`: View all lockable types.
+- **Admin Only**:
+  - `/lock <type>`: Lock a certain type of message.
+  - `/unlock <type>`: Remove a lock.
+  - `/locks`: View current locks in the group.
+- **Note**: Unlock permissions only for `info` and `pin`.
 
 ---
 
-### Zombie Accounts
+## 🛑 Log Commands
 
-**Purpose:** Remove deleted accounts from the group.
+Keep track of group activities with logs:
 
-- **/zombies**: Start searching for deleted accounts in the group.
-- **/zombies clean**: Remove the deleted accounts from the group.
+- **Admin Only**:
+  - `/logchannel`: Get log channel info.
+  - `/setlog`: Set up the log channel.
+  - `/unsetlog`: Remove the log channel.
 
 ---
+
+## 🔕 Mute Commands
+
+Prevent users from sending messages:
+
+- **Admin Only**:
+  - `/mute <user>`: Mute a user.
+  - `/tmute <user> <time>`: Temporarily mute a user (`m` for minutes, `h` for hours, `d` for days).
+  - `/unmute <user>`: Unmute a user.
+
+---
+
+## 🌙 Night Mode Commands
+
+Automatically manage messages during night hours:
+
+- **Admins Only**:
+  - `/nightmode`: Add group to night mode.
+  - `/rmnight`: Remove group from night mode.
+- **Note**: Night mode closes chats at 12 AM and opens at 6 AM (IST).
+
+---
+
+## 🗒 Notes Commands
+
+Manage informative messages for your group:
+
+- Get and list notes:
+  - `/get <note>`: Retrieve a specific note.
+  - `/notes`: List all saved notes.
+- **Admins Only**:
+  - `/save <note> <data>`: Save a new note.
+  - `/clear <note>`: Remove a specific note.
+  - `/removeallnotes`: Clear all notes.
+
+---
+
+## 📣 Tag All Commands
+
+Mention all members for important messages:
+
+- **Only for admins**:
+  - `/tagall` or `@all`: Mention all group members.
+
+---
+
+## ⚠️ Warn Commands
+
+Automate warnings for rule violations:
+
+- `/warns <user>`: View a user’s warnings.
+- `/warnlist`: List of all current warning filters.
+- **Admins Only**:
+  - `/warn <user>`: Issue a warning.
+  - `/resetwarn <user>`: Reset a user’s warnings.
+  - `/addwarn <keyword> <reply>`: Set a warning filter.
+  - `/nowarn <keyword>`: Stop a warning filter.
+  - `/warnlimit <num>`: Set warning limit.
+  - `/strongwarn <on/off>`: Decide severe actions on warning limit breach.
+
+---
+
+## 👋 Welcome Commands
+
+Customize welcome messages for your group:
+
+- Toggle and view settings:
+  - `/welcome <on/off>`: Enable or disable welcome messages.
+  - `/welcome`: Show current welcome settings.
+- **Customize Welcome/Goodbye**:
+  - `/setwelcome <text>`: Set a custom welcome message.
+  - `/setgoodbye <text>`: Set a custom goodbye message.
+  - `/resetwelcome`: Reset to default welcome message.
+  - `/resetgoodbye`: Reset to default goodbye message.
+  - `/cleanwelcome <on/off>`: Attempt to delete previous welcome messages to reduce clutter.
+- **Additional Commands**:
+  - `/cleanservice <on/off>`: Delete Telegram’s welcome/left messages.
+  - `/welcomehelp`: Detailed info on welcome message formatting.
+
+---
+
+## 👻 Zombie Commands
+
+Identify and remove inactive users:
+
+- `/zombies`: Start searching for deleted accounts.
+- `/zombies clean`: Remove deleted accounts from the group.
+
+---
+
+## 📜 Categories and Quick Links
+
+We know this is a lot to take in, but don't worry! Simply use the buttons provided in the bot interface to quickly navigate between these commands and get direct help based on the category you're interested in. Here's how:
+
+- 🖱️ **Modules**: Tap on specific module buttons to expand detailed command info.
+- 🔄 **Help Back**: Tap on the back button to navigate through modules.
+
+For any assistance, feel free to reach out to the support groups or contact a team member who's part of the special access groups, like `/devs` for Developer Commands or `/supportlist` for support users.
+
+*Tip: Always keep your bot version up to date to enjoy the latest features and security enhancements!*
+
+Thank you for choosing Quantum Bot, where managing your group becomes not just easy, but also fun! 🎉
