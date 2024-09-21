@@ -36,7 +36,7 @@
 
 The easiest way to deploy the Group Controller:
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/noob-mukesh/advance-repo"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45" alt="Deploy to Heroku"></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/quantum/#"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45" alt="Deploy to Heroku"></a></p>
 
 ---
 
@@ -52,7 +52,7 @@ Discover the secrets by following our [video tutorial on YouTube](https://youtu.
 
 ### ᴠᴘs/ʟᴏᴄᴀʟ ᴅᴇᴘʟᴏʏᴍᴇɴᴛ ᴍᴇᴛʜᴏᴅ
 
-1. Obtain your [Necessary Variables](https://github.com/Noob-Quantum/advance-repo/blob/main/Quantum/config.py).
+1. Obtain your [Necessary Variables](https://github.com/#).
 2. Upgrade and Update:
    ```bash
    sudo apt-get update && sudo apt-get upgrade -y
@@ -120,8 +120,6 @@ Place this file in `Quantum/modules/`, restart, and test your bot.
 ## Credits
 
 Massive thanks to the Quantum project and all [contributors](https://github.com/Noob-Quantum/Quantum/graphs/contributors) who helped make this group controller both powerful and useful ❤️.
-
-[QUANTUM](https://t.me/quantumbytesai)
 
 
 This version uses standard elements like headers, lists, and code blocks that should render consistently across different GitHub markdown viewers, ensuring clarity and readability. Remember to preview the changes on GitHub to ensure everything appears as expected.
