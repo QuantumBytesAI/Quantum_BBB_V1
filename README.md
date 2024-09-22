@@ -21,9 +21,9 @@
 
 <h3>Welcome! Meet your new Telegram group management companion, Quantum Robot. Created collaboratively with BaBa, this bot simplifies your group management tasks. Enjoy exploring its many features and have a great time using it!</h3>
 
-####Final Count
-####Admin Commands: 121
-####User Commands: 148
+**Final Count:**
+Admin Commands: **121**
+User Commands: **148**
 
 ---
 
